@@ -3,14 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Page Title</title>
+    <title>yPhone</title>
+    <link rel="icon" type="image/icon" href="/Images/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap"
       rel="stylesheet" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-    <script src="script.js"></script>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-white">
@@ -34,42 +36,101 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#">Features</a>
+              <a class="nav-link active" href="#">Latest</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./shop.html">shop</a>
+            <li>
+              <a class="nav-link" href="./shop.html">Shop</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
     <div class="first">
-      <h1 class="text-center margin">yPhone 4 se ultra pro max 5G plus fold</h1>
+      <h1 class="text-center" id="minusmargin">
+        yPhone 4 ultra pro max 5G plus fold
+      </h1>
       <h3 class="text-center mid">Why?Phone</h3>
     </div>
-    <div class="container-fluid">
+    <div class="container-fluid text-center">
       <div class="row">
-        <div class="col-lg-3 col-sm-12 mb-4">
-          <div class="card m-3" style="width: 18rem;">
+        <div class="col-sm-12 col-lg-4 mt-3">
+          <div class="card">
             <span class="material-symbols-outlined text-center p-2 mr-3">
               battery_full_alt
-              </span>
+            </span>
             <div class="card-body">
-              <h5 class="card-title text-center">Up to 2 hours</h5>
-              <p class="card-text text-center">Best battery life you can find!</p>
+              <h5 class="card-title">Battery</h5>
+              <p class="card-text">The battery will last up to 1 hour</p>
             </div>
           </div>
-          <div class="card m-3" style="width: 18rem;">
+        </div>
+        <div class="col-sm-12 col-lg-4 mt-3">
+          <div class="card">
             <span class="material-symbols-outlined text-center p-2 mr-3">
               memory_alt
-              </span>
+            </span>
             <div class="card-body">
-              <h5 class="card-title text-center">128 mb RAM</h5>
-              <p class="card-text text-center">You can run Super Mario 65536 times</p>
+              <h5 class="card-title">RAM</h5>
+              <p class="card-text">The yPhone comes with 128 mb RAM.</p>
             </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-4 mt-3">
+          <div class="card">
+            <span class="material-symbols-outlined text-center p-2 mr-3">
+              memory
+            </span>
+            <div class="card-body">
+              <h5 class="card-title">Storage</h5>
+              <p class="card-text">
+                The yPhone have <strong>3 gb </strong>of storage*
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-4 mt-3">
+          <div class="card">
+            <span class="material-symbols-outlined text-center p-2 mr-3">
+              camera
+            </span>
+            <div class="card-body">
+              <h5 class="card-title">Camera</h5>
+              <p class="card-text">
+                The camera have 0.01 megapixels resolution
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-4 mt-3">
+          <div class="card">
+            <span class="material-symbols-outlined text-center p-2 mr-3">
+              videocam
+            </span>
+            <div class="card-body">
+              <h5 class="card-title">Video</h5>
+              <p class="card-text">
+                Shaky mode! Turn a smooth video into a shaky video
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-4 mt-3">
+          <div class="card">
+            <span class="material-symbols-outlined text-center p-2 mr-3">
+              charger
+            </span>
+            <div class="card-body">
+              <h5 class="card-title">Wireless charging</h5>
+              <p class="card-text">
+                The yPhone 4 is the first phone to have only wireless charging.
+                Up to 0.5 watt
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+    <p class="m-3">* The yPhone has 32 pre-installed apps</p>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -80,4 +141,9 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"></script>
   </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"
+    integrity="sha256-WCzAhd2P6gRJF9Hv3oOOd+hFJi/QJbv+Azn4CGB8gfY="
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
 </html>

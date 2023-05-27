@@ -7,6 +7,11 @@
   background-color: white;
 }
 
+/* .material-symbols-outlined {
+  font-size: 80%;
+  margin-top: 6px;
+  margin-left: 2px;
+} */
 /* index.html */
 .yphone-img-text {
   position: relative;
@@ -27,6 +32,10 @@
   margin-top: 6%;
 }
 
+.alert.text-center.cookiealert.fixed-bottom {
+  background-color: white;
+}
+
 /* yphone.html */
 .text-center.margin {
   margin-top: 10%;
@@ -36,9 +45,29 @@
   margin-top: 2%;
 }
 
-
-
 .material-symbols-outlined.text-center.p-2.mr-3 {
   font-size: 300%;
 }
+
+.first {
+  background-color: #0f1834;
+  color: white;
+  padding: 100px;
+}
+
+#minusmargin {
+  margin-top: -10px;
+}
 /* shop.html */
+h6 {
+  font-weight: bolder;
+}
+
+/* cart.html */
+.text-center.display-6 {
+  margin-top: 450px;
+}
+
+.btn-margin {
+  margin-left: 44%;
+}
