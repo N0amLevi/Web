@@ -42,60 +42,18 @@
               <a class="nav-link active" href="#">Shop</a>
             </li>
             <li>
-              <!-- Button trigger modal -->
-              <button
-                type="button"
-                class="btn"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleModal">
-                <span class="material-symbols-outlined"> shopping_cart </span>
-              </button>
-
-              <!-- Modal -->
-              <div
-                class="modal fade"
-                id="exampleModal"
-                tabindex="-1"
-                aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="exampleModalLabel">
-                        Cart
-                      </h1>
-                      <button
-                        type="button"
-                        class="btn-close"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      <div class="container" id="empty-cart">
-                        <h1 class="text-center display-1">
-                          There's nothing here...
-                        </h1>
-                        <p class="text-center display-6">
-                          It appears that your shopping cart is empty. I'm
+              <a class="btn btn-transparent" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Cart</a>
+              <div class="row">
+                <div class="col">
+                  <div class="collapse multi-collapse" id="multiCollapseExample1">
+                    <div class="card card-body m-3" id="cart-empty">
+                      It appears that your shopping cart is empty. I'm
                           eagerly awaiting your money. Remember: the more you
                           spend, the quicker I get to buy a Lamborghini.
-                        </p>
-                      </div>
-                    </div>
-                    <div class="modal-footer">
-                      <button
-                        type="button"
-                        class="btn btn-secondary"
-                        data-bs-dismiss="modal">
-                        Close
-                      </button>
-                      <button type="button" class="btn btn-primary">
-                        Checkout
-                      </button>
                     </div>
                   </div>
                 </div>
-              </div>
+              
             </li>
           </ul>
         </div>
@@ -118,8 +76,8 @@
               <h6>699$</h6>
               <button
                 type="button"
-                onclick="yPhone1()"
                 class="btn"
+                id="yPhone1"
                 style="background-color: #253d83; color: white">
                 Add to cart
               </button>
@@ -190,7 +148,7 @@
               phone_iphone
             </span>
             <div class="card-body">
-              <h5 class="card-title">yPhone 4</h5>
+              <h5 class="card-title">yPhone 4 <span class="badge bg-secondary">New</span></h5>
               <p class="card-text">The newest yPhone device</p>
               <h6>1099$</h6>
               <button
@@ -208,7 +166,7 @@
               grade
             </span>
             <div class="card-body">
-              <h5 class="card-title">yPhone 4 ultra pro max 5G plus fold</h5>
+              <h5 class="card-title">yPhone 4 ultra pro max 5G plus fold <span class="badge bg-secondary">New</span></h5>
               <p class="card-text">The best yPhone you can get</p>
               <h6>1999$</h6>
               <button
@@ -220,6 +178,9 @@
             </div>
           </div>
         </div>
+      </div>
+      <div id="cart">
+
       </div>
     </div>
     <p class="m-3">* Prices not including tax</p>
