@@ -42,18 +42,95 @@
               <a class="nav-link active" href="#">Shop</a>
             </li>
             <li>
-              <a class="btn btn-transparent" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Cart</a>
-              <div class="row">
-                <div class="col">
-                  <div class="collapse multi-collapse" id="multiCollapseExample1">
-                    <div class="card card-body m-3" id="cart-empty">
-                      It appears that your shopping cart is empty. I'm
-                          eagerly awaiting your money. Remember: the more you
-                          spend, the quicker I get to buy a Lamborghini.
+              <!-- Button trigger modal -->
+              <button
+                type="button"
+                class="btn"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal">
+                Cart
+              </button>
+
+              <!-- Modal -->
+              <div
+                class="modal fade"
+                id="exampleModal"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">
+                        Cart
+                      </h1>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <!-- <div id="cart-empty" class="fs-3">
+                        It appears that your shopping cart is empty. I'm eagerly
+                        awaiting your money. Remember: the more you spend, the
+                        quicker I get to buy a Lamborghini.
+                      </div> -->
+                      <table class="cart-table">
+                        <tr>
+                          <td>Product</td>
+                          <td>price</td>
+                          <td>amount</td>
+                        </tr>
+                        <tr class="cart-row">
+                          <td>yPhone1</td>
+                          <td class="cart-price">$699</td>
+                          <td>
+                            <input
+                              type="number"
+                              class="amount-input"
+                              value="1" />
+                          </td>
+                          <td>
+                            <button class="btn btn-danger">remove</button>
+                          </td>
+                        </tr>
+                        <tr class="cart-row">
+                          <td>yPhone2</td>
+                          <td class="cart-price">$699</td>
+                          <td>
+                            <input
+                              type="number"
+                              class="amount-input"
+                              value="1" />
+                          </td>
+                          <td>
+                            <button class="btn btn-danger">remove</button>
+                          </td>
+                        </tr>
+                      </table>
+                      <table>
+                        <tr>
+                          <td class="cart-total">
+                            Total: <span class="cart-total-price">$1398</span>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal">
+                        Close
+                      </button>
+                      <button type="button" class="btn btn-primary">
+                        Checkout
+                      </button>
                     </div>
                   </div>
                 </div>
-              
+              </div>
             </li>
           </ul>
         </div>
@@ -68,16 +145,18 @@
         <div class="col-sm-12 col-lg-4 mt-3">
           <div class="card">
             <span class="material-symbols-outlined text-center p-2 mr-3">
-              looks_one
+              grade
             </span>
             <div class="card-body">
-              <h5 class="card-title">yPhone 1</h5>
-              <p class="card-text">The first yPhone ever</p>
-              <h6>699$</h6>
+              <h5 class="card-title">
+                yPhone 4 ultra pro max 5G plus fold
+                <span class="badge bg-secondary">New</span>
+              </h5>
+              <p class="card-text">The best yPhone you can get</p>
+              <h6 class="shop-item-price">$1999</h6>
               <button
                 type="button"
-                class="btn"
-                id="yPhone1"
+                class="btn add-to-cart"
                 style="background-color: #253d83; color: white">
                 Add to cart
               </button>
@@ -87,17 +166,35 @@
         <div class="col-sm-12 col-lg-4 mt-3">
           <div class="card">
             <span class="material-symbols-outlined text-center p-2 mr-3">
-              photo_camera
+              phone_iphone
             </span>
             <div class="card-body">
-              <h5 class="card-title">yPhone 2</h5>
-              <p class="card-text">
-                The second yPhone, Introduced cameras to the yPhones
-              </p>
-              <h6>799$</h6>
+              <h5 class="card-title">
+                yPhone 4 <span class="badge bg-secondary">New</span>
+              </h5>
+              <p class="card-text">The newest yPhone device</p>
+              <h6 class="shop-item-price">$1099</h6>
               <button
                 type="button"
-                class="btn"
+                class="btn add-to-cart"
+                style="background-color: #253d83; color: white">
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-4 mt-3">
+          <div class="card">
+            <span class="material-symbols-outlined text-center p-2 mr-3">
+              smartphone
+            </span>
+            <div class="card-body">
+              <h5 class="card-title">yPhone 3 se</h5>
+              <p class="card-text">Smaller version of the yPhone 3</p>
+              <h6 class="shop-item-price">$999</h6>
+              <button
+                type="button"
+                class="btn add-to-cart"
                 style="background-color: #253d83; color: white">
                 Add to cart
               </button>
@@ -114,10 +211,10 @@
               <p class="card-text">
                 The third yPhone, the first yPhone with charging at all
               </p>
-              <h6>899$</h6>
+              <h6 class="shop-item-price">$899</h6>
               <button
                 type="button"
-                class="btn"
+                class="btn add-to-cart"
                 style="background-color: #253d83; color: white">
                 Add to cart
               </button>
@@ -127,15 +224,17 @@
         <div class="col-sm-12 col-lg-4 mt-3">
           <div class="card">
             <span class="material-symbols-outlined text-center p-2 mr-3">
-              smartphone
+              photo_camera
             </span>
             <div class="card-body">
-              <h5 class="card-title">yPhone 3 se</h5>
-              <p class="card-text">Smaller version of the yPhone 3</p>
-              <h6>999$</h6>
+              <h5 class="card-title">yPhone 2</h5>
+              <p class="card-text">
+                The second yPhone, Introduced cameras to the yPhones
+              </p>
+              <h6 class="shop-item-price">$799</h6>
               <button
                 type="button"
-                class="btn"
+                class="btn add-to-cart"
                 style="background-color: #253d83; color: white">
                 Add to cart
               </button>
@@ -145,42 +244,22 @@
         <div class="col-sm-12 col-lg-4 mt-3">
           <div class="card">
             <span class="material-symbols-outlined text-center p-2 mr-3">
-              phone_iphone
+              looks_one
             </span>
             <div class="card-body">
-              <h5 class="card-title">yPhone 4 <span class="badge bg-secondary">New</span></h5>
-              <p class="card-text">The newest yPhone device</p>
-              <h6>1099$</h6>
+              <h5 class="card-title">yPhone 1</h5>
+              <p class="card-text">The first yPhone ever</p>
+              <h6 class="shop-item-price">$699</h6>
               <button
                 type="button"
-                class="btn"
+                class="btn add-to-cart"
+                id="yPhone1"
                 style="background-color: #253d83; color: white">
                 Add to cart
               </button>
             </div>
           </div>
         </div>
-        <div class="col-sm-12 col-lg-4 mt-3">
-          <div class="card">
-            <span class="material-symbols-outlined text-center p-2 mr-3">
-              grade
-            </span>
-            <div class="card-body">
-              <h5 class="card-title">yPhone 4 ultra pro max 5G plus fold <span class="badge bg-secondary">New</span></h5>
-              <p class="card-text">The best yPhone you can get</p>
-              <h6>1999$</h6>
-              <button
-                type="button"
-                class="btn"
-                style="background-color: #253d83; color: white">
-                Add to cart
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="cart">
-
       </div>
     </div>
     <p class="m-3">* Prices not including tax</p>
@@ -193,10 +272,10 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"
+      integrity="sha256-WCzAhd2P6gRJF9Hv3oOOd+hFJi/QJbv+Azn4CGB8gfY="
+      crossorigin="anonymous"></script>
+    <script src="shop.js" async></script>
   </body>
-  <script
-    src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"
-    integrity="sha256-WCzAhd2P6gRJF9Hv3oOOd+hFJi/QJbv+Azn4CGB8gfY="
-    crossorigin="anonymous"></script>
-  <script src="script.js"></script>
 </html>

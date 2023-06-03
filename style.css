@@ -7,11 +7,6 @@
   background-color: white;
 }
 
-/* .material-symbols-outlined {
-  font-size: 80%;
-  margin-top: 6px;
-  margin-left: 2px;
-} */
 /* index.html */
 .yphone-img-text {
   position: relative;
@@ -63,11 +58,16 @@ h6 {
   font-weight: bolder;
 }
 
-/* cart.html */
-.text-center.display-6 {
-  margin-top: 450px;
+/* remove later*/
+table,
+td {
+  padding: 4px;
 }
 
-.btn-margin {
-  margin-left: 44%;
+table {
+  width: 100%;
+}
+
+input {
+  width: 100%;
 }
