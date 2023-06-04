@@ -1,22 +1,25 @@
+//check if document is loaded
 if (document.readyState == "laoding") {
   document.addEventListener("DOMContentLoaded", ready);
 } else {
   ready();
 }
 
+//run if document is ready
 function ready() {
+  //check if user tries to remove item from cart
   let removeCartItemsButtons = document.getElementsByClassName("btn-danger");
   for (let i = 0; i < removeCartItemsButtons.length; i++) {
     let button = removeCartItemsButtons[i];
     button.addEventListener("click", removeCartItem);
   }
-
+  //check if user tries to change the amount of item in cart
   let amountInputs = document.getElementsByClassName("amount-input");
   for (let i = 0; i < amountInputs.length; i++) {
     let input = amountInputs[i];
     input.addEventListener("change", amountChanged);
   }
-
+  //check if user tries to add item to cart
   let addToCartButtons = document.getElementsByClassName("add-to-cart");
   for (let i = 0; i < addToCartButtons.length; i++) {
     let button = addToCartButtons[i];
@@ -27,23 +30,27 @@ function ready() {
     .getElementsByClassName("btn-checkout")[0]
     .addEventListener("click", purchaseClicked);
 }
-
+//check if user tries to purchase the items in the cart
 function purchaseClicked() {
-  alert(
-    "Thank you for your purchase, I am one step closer to buy a Lamborghini"
-  );
   let cartItems = document.getElementsByClassName("cart-table")[0];
-  while (cartItems.hasChildNodes()) {
-    cartItems.removeChild(cartItems.firstChild);
+  if (cartItems.hasChildNodes() == true) {
+    while (cartItems.hasChildNodes()) {
+      cartItems.removeChild(cartItems.firstChild);
+    }
+    alert(
+      "Thank you for your purchase, I am one step closer to buying a Lamborghini"
+    );
+  } else {
+    alert("There's nothing in the cart");
   }
   updateTotal();
 }
-
+//removes cart items if user clicks on remove button
 function removeCartItem(event) {
   event.target.parentElement.parentElement.remove();
   updateTotal();
 }
-
+//changes the amount of cart item
 function amountChanged(event) {
   let input = event.target;
   if (isNaN(input.value) || input.value <= 0) {
@@ -51,7 +58,7 @@ function amountChanged(event) {
   }
   updateTotal();
 }
-
+//checks if add to cart button is clicked
 function addToCartClicked(event) {
   let button = event.target;
   let shopItem = button.parentElement.parentElement;
@@ -60,7 +67,7 @@ function addToCartClicked(event) {
   addItemToCart(title, price);
   updateTotal();
 }
-
+//adds item to cart when add to cart button is clicked
 function addItemToCart(title, price) {
   let cartRow = document.createElement("tr");
   cartRow.classList.add("cart-row");
@@ -95,7 +102,7 @@ function addItemToCart(title, price) {
     .getElementsByClassName("amount-input")[0]
     .addEventListener("change", amountChanged);
 }
-
+//updates the total in the cart
 function updateTotal() {
   let cartItemContainer = document.getElementsByClassName("cart-table")[0];
   let cartRows = cartItemContainer.getElementsByClassName("cart-row");

@@ -27,8 +27,9 @@
   margin-top: 6%;
 }
 
-.alert.text-center.cookiealert.fixed-bottom {
+#cookies-alert {
   background-color: white;
+  position: sticky;
 }
 
 /* yphone.html */
