@@ -27,6 +27,11 @@
   margin-top: 6%;
 }
 
+.img-fluid.mx-auto.d-block {
+  width: 100%;
+  height: 100%;
+}
+
 #cookies-alert {
   background-color: white;
   position: sticky;
