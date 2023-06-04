@@ -22,6 +22,21 @@ function ready() {
     let button = addToCartButtons[i];
     button.addEventListener("click", addToCartClicked);
   }
+
+  document
+    .getElementsByClassName("btn-checkout")[0]
+    .addEventListener("click", purchaseClicked);
+}
+
+function purchaseClicked() {
+  alert(
+    "Thank you for your purchase, I am one step closer to buy a Lamborghini"
+  );
+  let cartItems = document.getElementsByClassName("cart-table")[0];
+  while (cartItems.hasChildNodes()) {
+    cartItems.removeChild(cartItems.firstChild);
+  }
+  updateTotal();
 }
 
 function removeCartItem(event) {
@@ -43,13 +58,23 @@ function addToCartClicked(event) {
   let title = shopItem.getElementsByClassName("card-title")[0].innerText;
   let price = shopItem.getElementsByTagName("h6")[0].innerText;
   addItemToCart(title, price);
+  updateTotal();
 }
 
 function addItemToCart(title, price) {
   let cartRow = document.createElement("tr");
+  cartRow.classList.add("cart-row");
   let cartItems = document.getElementsByClassName("cart-table")[0];
+  let cartItemNames = cartItems.getElementsByClassName("card-title");
+  for (let i = 0; i < cartItemNames.length; i++) {
+    if (cartItemNames[i].innerText == title) {
+      alert("This item is already in the cart");
+      return;
+    }
+  }
+
   let cartRowContent = `
-    <td>${title}</td>
+    <td class="card-title">${title}</td>
     <td class="cart-price">${price}</td>
     <td>
     <input
@@ -63,6 +88,12 @@ function addItemToCart(title, price) {
 `;
   cartRow.innerHTML = cartRowContent;
   cartItems.append(cartRow);
+  cartRow
+    .getElementsByClassName("btn-danger")[0]
+    .addEventListener("click", removeCartItem);
+  cartRow
+    .getElementsByClassName("amount-input")[0]
+    .addEventListener("change", amountChanged);
 }
 
 function updateTotal() {
@@ -75,8 +106,8 @@ function updateTotal() {
     let amountElement = cartRow.getElementsByClassName("amount-input")[0];
     let price = parseInt(priceElement.innerText.replace("$", ""));
     let amount = amountElement.value;
-    total = total + price * amount;
+    total += price * amount;
   }
   document.getElementsByClassName("cart-total-price")[0].innerText =
-    "Total:" + "$" + total;
+    "$" + total;
 }
